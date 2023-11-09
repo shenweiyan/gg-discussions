@@ -66,8 +66,8 @@ export default function BlogIssues(props: any) {
         <PrevNext previous={pageCxt.previous} next={pageCxt.next} />
         <div className="answer-content">
 	    <script src="https://giscus.app/client.js"
-                data-repo="shenweiyan/Knowledge-Garden"
-                data-repo-id="R_kgDOKgxWlg"
+                data-repo="shenweiyan/gg-discussions"
+                data-repo-id="R_kgDOKqxPjw"
                 data-mapping="number"
                 data-term="{data.number}"
                 data-reactions-enabled="1"
