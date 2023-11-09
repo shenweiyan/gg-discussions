@@ -13,7 +13,7 @@ import Label from '@comps/label';
 import PrevNext from '@comps/prev_next';
 import '@styles/issues.scss';
 
-import Giscus from "@giscus/react";
+import { Giscus } from '@giscus/react';
 
 export default function BlogIssues(props: any) {
   const [isHide, setHide] = useState(true);
@@ -68,6 +68,7 @@ export default function BlogIssues(props: any) {
         <PrevNext previous={pageCxt.previous} next={pageCxt.next} />
         <div className="answer-content">
 	    <Giscus
+	        id="giscus-comments"    
                 repo="shenweiyan/gg-discussions"
                 repoId="R_kgDOKqxPjw"
                 mapping="number"
@@ -78,7 +79,6 @@ export default function BlogIssues(props: any) {
                 theme="light"
                 lang="zh-CN"
                 crossorigin="anonymous"
-                async
             />
         </div>
       </div>
