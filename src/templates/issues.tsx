@@ -65,43 +65,19 @@ export default function BlogIssues(props: any) {
         </div>
         <PrevNext previous={pageCxt.previous} next={pageCxt.next} />
         <div className="answer-content">
-          {hasComments && isa && (
-            <div
-              className="icon-action answericon"
-              title="Answer"
-              onClick={() => setHide(!isHide)}
-            >
-              <Icon icon={iconAnswer} fontSize={30} />
-            </div>
-          )}
-          <div className="comments">
-            {hasComments &&
-              !isHide &&
-              comments?.[0]?.node?.author?.login &&
-              comments.map(({ node }: any) => {
-                const _replies = node?.replies?.edges;
-                return (
-                  <div className="comments-item" key={node.id}>
-                    <Author author={node.author} />
-                    <div
-                      className="comments-item-content"
-                      dangerouslySetInnerHTML={{ __html: node.bodyHTML }}
-                    />
-                    {_replies?.map(({ node: node2 }: any) => {
-                      return (
-                        <div className="comments-item" key={node2.id}>
-                          <Author author={node2.author} />
-                          <div
-                            className="comments-item-content"
-                            dangerouslySetInnerHTML={{ __html: node2.bodyHTML }}
-                          />
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              })}
-          </div>
+	    <script src="https://giscus.app/client.js"
+                data-repo="shenweiyan/Knowledge-Garden"
+                data-repo-id="R_kgDOKgxWlg"
+                data-mapping="number"
+                data-term="{data.number}"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="light"
+                data-lang="zh-CN"
+                crossorigin="anonymous"
+                async>
+            </script>
         </div>
       </div>
     </Layout>
