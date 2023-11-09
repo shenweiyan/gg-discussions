@@ -13,6 +13,8 @@ import Label from '@comps/label';
 import PrevNext from '@comps/prev_next';
 import '@styles/issues.scss';
 
+import Giscus from "@giscus/react";
+
 export default function BlogIssues(props: any) {
   const [isHide, setHide] = useState(true);
   const data = props?.data?.issuesJson || {};
@@ -65,19 +67,19 @@ export default function BlogIssues(props: any) {
         </div>
         <PrevNext previous={pageCxt.previous} next={pageCxt.next} />
         <div className="answer-content">
-	    <script src="https://giscus.app/client.js"
-                data-repo="shenweiyan/gg-discussions"
-                data-repo-id="R_kgDOKqxPjw"
-                data-mapping="number"
-                data-term="{data.number}"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="bottom"
-                data-theme="light"
-                data-lang="zh-CN"
+	    <Giscus
+                repo="shenweiyan/gg-discussions"
+                repoId="R_kgDOKqxPjw"
+                mapping="number"
+                term={data.number}
+                reactionsEnabled="1"
+                emitMetadata="0"
+                inputPosition="bottom"
+                theme="light"
+                lang="zh-CN"
                 crossorigin="anonymous"
-                async>
-            </script>
+                async
+            />
         </div>
       </div>
     </Layout>

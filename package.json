@@ -50,7 +50,8 @@
     "react-helmet-async": "^1.2.3",
     "sass": "^1.49.9",
     "slugify": "^1.6.5",
-    "webpack-filter-warnings-plugin": "^1.2.1"
+    "webpack-filter-warnings-plugin": "^1.2.1",
+    "@giscus/react": "*"
   },
   "devDependencies": {
     "@types/body-scroll-lock": "^3.1.0",
