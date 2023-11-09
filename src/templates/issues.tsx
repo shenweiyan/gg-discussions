@@ -13,7 +13,7 @@ import Label from '@comps/label';
 import PrevNext from '@comps/prev_next';
 import '@styles/issues.scss';
 
-import { Giscus } from '@giscus/react';
+import Giscus from '@giscus/react';
 
 export default function BlogIssues(props: any) {
   const [isHide, setHide] = useState(true);
