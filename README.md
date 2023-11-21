@@ -1,4 +1,6 @@
-# GG
+## 基于 GitHub Discussions 的博客
+
+参考：https://shenweiyan.github.io/
 
 > **GG: Gatsby + GitHub**
 
