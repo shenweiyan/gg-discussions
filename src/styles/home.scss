@@ -12,6 +12,7 @@
     .author-info {
       margin-bottom: 3px;
       float: right;
+      width: 220px;
 
       .author {
         img {
@@ -33,10 +34,11 @@
 
     .post-info {
       .title {
-        font-size: 15px;
-        font-weight: bold;
+        font-size: unset;
+        font-weight: unset;
         text-decoration: none;
         vertical-align: middle;
+	padding-right: 20px;
       }
     }
 
@@ -69,6 +71,8 @@
 
         .author-info {
           margin-bottom: 5px;
+	  float: none;
+	  width: auto;
         }
       }
     }

@@ -25,10 +25,10 @@ export default function IndexPage(props: any) {
                   extra={<IssuesNum number={node.number} />}
                 />
                 <div className="post-info">
-                  <Category data={category} />
                   <Link className="title" to={`/issues/${node.number}`}>
                     {node.title}
                   </Link>
+		  <Category data={category} />
                 </div>
               </div>
             );
