@@ -65,9 +65,9 @@ export default function Layout(props: LayoutProps) {
           </div>
           <div className="copyright">
             <span>
-              Copyright ©{' '}
+              ©{' '}
               {data?.website?.built_date || new Date().getFullYear()}
-              -present
+              -{new Date().getFullYear()}
             </span>
             <a className="owner" href={dataRepo} target="_blank">
               {repoTxt}
