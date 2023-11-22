@@ -8,18 +8,18 @@ on:
   schedule:
     - cron: '0 20 * * *'
   # https://docs.github.com/en/enterprise-cloud@latest/actions/using-workflows/events-that-trigger-workflows#discussion
-  discussion:
-    types: [created, edited, answered, deleted, transferred]
+  #discussion:
+    #types: [created, edited, answered, deleted, transferred]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '16'
       - run: yarn
       - run: yarn posts:ci --token=${{ secrets.PERSONAL_ACCESS_TOKEN }} --repository=${{ github.repository }} --type=${{ secrets.GG_TYPE }} --dis-owner=${{ secrets.GG_DIS_OWNER }} --dis-repo=${{ secrets.GG_DIS_REPO }} --issues-owner=${{ secrets.GG_ISSUES_OWNER }} --issues-repo=${{ secrets.GG_ISSUES_REPO }} --issues-state=${{ secrets.GG_ISSUES_STATE }}
       - run: yarn reconf
