@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-category-tsx",
+    "path": "/category/12-折腾",
+    "result": {"data":{"allDiscussionsJson":{"nodes":[{"node":{"title":"Gatsby + GitHub Discussions","number":5}},{"node":{"title":"折腾一下","number":4}}]}},"pageContext":{"category":{"name":"1.2 折腾","emoji":":hammer_and_wrench:","description":"Share ideas for new features","isAnswerable":false},"name":"1.2 折腾","nlen":1}},
+    "staticQueryHashes": ["151096407","2861350382"]}
