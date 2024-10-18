@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+  <title>RSS</title>
+  <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+  <link>/</link>
+  <description>GitHub Discussions</description>
+  <item>
+  <title><![CDATA[关于 GG]]></title>
+  <link>https://github.com/shenweiyan/gg-discussions/discussions/6</link>
+  <guid isPermaLink="false">https://github.com/shenweiyan/gg-discussions/discussions/6</guid>
+  <pubDate>2023-11-22</pubDate>
+  <description><![CDATA[<blockquote>
+<p dir="auto">Via：<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3956346" data-permission-text="Title is private" data-url="https://github.com/lencx/gg/discussions/4" data-hovercard-type="discussion" data-hovercard-url="/lencx/gg/discussions/4/hovercard" href="https://github.com/lencx/gg/discussions/4">lencx#4</a></p>
+</blockquote>
+<blockquote>
+<p dir="auto"><strong>GG: Gatsby + GitHub</strong></p>
+</blockquote>
+<h2 dir="auto">背景</h2>
+<p dir="auto">我想要一个可以实时编辑文章的在线 IDE，支持分类，标签，多编程语言，评论互动及问答模式。发文也不需要受到平台的审核及约束，综合考虑下来决定基于 GitHub 来打造一个社区。同样的事情，我希望可以只用做一次，然后可以无限复用这种能力。所以我选择将它开源，并且完全基于 GitHub 所提供的能力来实现。</p>
+<h2 dir="auto">技术栈</h2>
+<ul dir="auto">
+<li><a href="https://www.gatsbyjs.com/" rel="nofollow">Gatsby.js</a> - 一个基于 React 的免费、开源框架，用于帮助开发者构建运行速度极快的网站和应用程序</li>
+<li><a href="https://github.com/lencx/rgd">lencx/rgd</a> - 一个命令行工具，可以将 GitHub Discussions API 生成 RSS 和 JSON 文件</li>
+<li><a href="https://docs.github.com/en/graphql/guides/using-the-graphql-api-for-discussions">GitHub Discussions API</a> - 通过接口查询数据</li>
+<li><a href="https://pages.github.com/">GitHub Pages</a> - 网站部署</li>
+<li><a href="https://docs.github.com/en/actions/using-workflows/triggering-a-workflow">GitHub Actions workflow</a> - 定时任务，自动构建，及部署等</li>
+<li><a href="https://web.dev/progressive-web-apps/" rel="nofollow">PWA</a> - 渐进式 Web 应用程序</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" rel="nofollow">响应式</a> - 同时支持桌面端，及移动端</li>
+</ul>
+<h2 dir="auto">工作原理</h2>
+<p dir="auto"><code class="notranslate">lencx/rgd</code> 从 <code class="notranslate">Discussions API</code> 中获取数据生成的 <code class="notranslate">JSON</code> 文件，会通过 <code class="notranslate">Gatsby.js</code> 的 <code class="notranslate">gatsby-transformer-json</code> 插件解析生成 <code class="notranslate">GraphQL</code> 数据作为网站数据源，用来渲染页面。<code class="notranslate">GitHub Actions</code> 每天会定时跑任务，从 <code class="notranslate">GitHub Discussions</code> 获取最新数据变更，重新对网站进行构建，并将其推送到 <code class="notranslate">GitHub Pages</code>。</p>
+<h2 dir="auto">部署</h2>
+<p dir="auto">这个项目推荐的方式是配合 <code class="notranslate">GitHub Actions</code> 每天定时同步 Discussions 中的数据，将其构建后推送到 <code class="notranslate">GitHub Pages</code>。但是您也可以选择部署到其他平台。需要进行如下步骤：</p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="yarn deploy"><pre class="notranslate">yarn deploy</pre></div>
+<p dir="auto">将生成的 <code class="notranslate">public</code> 目录部署到其平台。</p>]]></description>
+</item>
+<item>
+  <title><![CDATA[Gatsby + GitHub Discussions]]></title>
+  <link>https://github.com/shenweiyan/gg-discussions/discussions/5</link>
+  <guid isPermaLink="false">https://github.com/shenweiyan/gg-discussions/discussions/5</guid>
+  <pubDate>2023-11-22</pubDate>
+  <description><![CDATA[<p dir="auto">这个 <a href="https://github.com/lencx/gg">GG: Gatsby + GitHub</a> 实现的方法好用的确是挺好用的，唯一不足的是评论部分的内容有点差强人意，如果能增加一个 <a href="https://giscus.app/" rel="nofollow">giscus</a> 的支持就好了。</p>
+<p dir="auto">个人尝试着折腾了一下，奈何个人对 Gatsby 实在搞不懂，无法实现，这个仓库 <a href="https://github.com/lencx/gg">gg</a> 好像也不怎么维护了，终究是有点鸡肋。</p>
+<p dir="auto">等我把 mkdocs 的博客一系列自定义的功能弄好，或许最终还是选择回到 mkdocs 上。</p>]]></description>
+</item>
+<item>
+  <title><![CDATA[rgd.yml]]></title>
+  <link>https://github.com/shenweiyan/gg-discussions/discussions/2</link>
+  <guid isPermaLink="false">https://github.com/shenweiyan/gg-discussions/discussions/2</guid>
+  <pubDate>2023-11-22</pubDate>
+  <description><![CDATA[<div class="highlight highlight-source-yaml notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="### 必须配置
+# github 用户名，支持个人或组织
+owner: shenweiyan
+# github 仓库名称
+repo: gg-discussions
+
+### 可选配置，如果 type 为 `discussions2` 类型，才需要以下配置
+# type: `issues` | `discussions` | `discussions2`, default is `discussions`
+type: discussions
+
+### 域名配置
+# 个人域名，如果没有则不需要设置
+# 默认使用 github 二级域名，即 https://&lt;owner&gt;.github.io/&lt;repo&gt;
+# cname: gg.nofwl.com
+
+### website 配置
+website:
+  # 1. 格式为 png 的 240x240 正方形图片
+  # 2. 在线图片 URL 地址，不设置则使用默认 logo
+  logo: https://user-images.githubusercontent.com/16164244/162659556-64dd7da8-321f-4525-bbbf-975f02b4800f.png
+  # 网站标题
+  title: Discussions Website
+  # 网站描述
+  description: A gatsby website builder based on github discussions
+
+### PWA Manifest 配置
+# https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest
+manifest:
+  name: GG
+  short_name: GG
+  start_url: /
+  background_color: '#fafafa'
+  theme_color: '#232629'
+  display: standalone
+  # 1. 格式为 png 的 240x240 正方形图片
+  # 2. 在线图片 URL 地址，不设置则使用默认 logo
+  icon: https://user-images.githubusercontent.com/16164244/162659556-64dd7da8-321f-4525-bbbf-975f02b4800f.png"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span>## 必须配置</span>
+<span class="pl-c"><span class="pl-c">#</span> github 用户名，支持个人或组织</span>
+<span class="pl-ent">owner</span>: <span class="pl-s">shenweiyan</span>
+<span class="pl-c"><span class="pl-c">#</span> github 仓库名称</span>
+<span class="pl-ent">repo</span>: <span class="pl-s">gg-discussions</span>
+
+<span class="pl-c"><span class="pl-c">#</span>## 可选配置，如果 type 为 `discussions2` 类型，才需要以下配置</span>
+<span class="pl-c"><span class="pl-c">#</span> type: `issues` | `discussions` | `discussions2`, default is `discussions`</span>
+<span class="pl-ent">type</span>: <span class="pl-s">discussions</span>
+
+<span class="pl-c"><span class="pl-c">#</span>## 域名配置</span>
+<span class="pl-c"><span class="pl-c">#</span> 个人域名，如果没有则不需要设置</span>
+<span class="pl-c"><span class="pl-c">#</span> 默认使用 github 二级域名，即 https://&lt;owner&gt;.github.io/&lt;repo&gt;</span>
+<span class="pl-c"><span class="pl-c">#</span> cname: gg.nofwl.com</span>
+
+<span class="pl-c"><span class="pl-c">#</span>## website 配置</span>
+<span class="pl-ent">website</span>:
+  <span class="pl-c"><span class="pl-c">#</span> 1. 格式为 png 的 240x240 正方形图片</span>
+  <span class="pl-c"><span class="pl-c">#</span> 2. 在线图片 URL 地址，不设置则使用默认 logo</span>
+  <span class="pl-ent">logo</span>: <span class="pl-s">https://user-images.githubusercontent.com/16164244/162659556-64dd7da8-321f-4525-bbbf-975f02b4800f.png</span>
+  <span class="pl-c"><span class="pl-c">#</span> 网站标题</span>
+  <span class="pl-ent">title</span>: <span class="pl-s">Discussions Website</span>
+  <span class="pl-c"><span class="pl-c">#</span> 网站描述</span>
+  <span class="pl-ent">description</span>: <span class="pl-s">A gatsby website builder based on github discussions</span>
+
+<span class="pl-c"><span class="pl-c">#</span>## PWA Manifest 配置</span>
+<span class="pl-c"><span class="pl-c">#</span> https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest</span>
+<span class="pl-ent">manifest</span>:
+  <span class="pl-ent">name</span>: <span class="pl-s">GG</span>
+  <span class="pl-ent">short_name</span>: <span class="pl-s">GG</span>
+  <span class="pl-ent">start_url</span>: <span class="pl-s">/</span>
+  <span class="pl-ent">background_color</span>: <span class="pl-s"><span class="pl-pds">'</span>#fafafa<span class="pl-pds">'</span></span>
+  <span class="pl-ent">theme_color</span>: <span class="pl-s"><span class="pl-pds">'</span>#232629<span class="pl-pds">'</span></span>
+  <span class="pl-ent">display</span>: <span class="pl-s">standalone</span>
+  <span class="pl-c"><span class="pl-c">#</span> 1. 格式为 png 的 240x240 正方形图片</span>
+  <span class="pl-c"><span class="pl-c">#</span> 2. 在线图片 URL 地址，不设置则使用默认 logo</span>
+  <span class="pl-ent">icon</span>: <span class="pl-s">https://user-images.githubusercontent.com/16164244/162659556-64dd7da8-321f-4525-bbbf-975f02b4800f.png</span></pre></div>]]></description>
+</item>
+<item>
+  <title><![CDATA[测试讨论]]></title>
+  <link>https://github.com/shenweiyan/gg-discussions/discussions/3</link>
+  <guid isPermaLink="false">https://github.com/shenweiyan/gg-discussions/discussions/3</guid>
+  <pubDate>2023-11-09</pubDate>
+  <description><![CDATA[<p dir="auto">Wed Nov  8 14:39:48 CST 2023</p>]]></description>
+</item>
+<item>
+  <title><![CDATA[折腾一下]]></title>
+  <link>https://github.com/shenweiyan/gg-discussions/discussions/4</link>
+  <guid isPermaLink="false">https://github.com/shenweiyan/gg-discussions/discussions/4</guid>
+  <pubDate>2023-11-08</pubDate>
+  <description><![CDATA[<p dir="auto">测试一下 sections + categories 的 discussions.</p>]]></description>
+</item>
+<item>
+  <title><![CDATA[Welcome to gg-discussions Discussions!]]></title>
+  <link>https://github.com/shenweiyan/gg-discussions/discussions/1</link>
+  <guid isPermaLink="false">https://github.com/shenweiyan/gg-discussions/discussions/1</guid>
+  <pubDate>2023-11-08</pubDate>
+  <description><![CDATA[
+<h2 dir="auto">👋 Welcome!</h2>
+<p dir="auto">We’re using Discussions as a place to connect with other members of our community. We hope that you:</p>
+<ul dir="auto">
+<li>Ask questions you’re wondering about.</li>
+<li>Share ideas.</li>
+<li>Engage with other community members.</li>
+<li>Welcome others and are open-minded. Remember that this is a community we<br>
+build together 💪.</li>
+</ul>
+<p dir="auto">To get started, comment below with an introduction of yourself and tell us about what you do with this community.</p>
+]]></description>
+</item>
+
+</channel>
+</rss>
