@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-issues-tsx",
+    "path": "/issues/5",
+    "result": {"data":{"issuesJson":{"id":"a01e4b37-2610-5684-a479-443eab8bb34f","title":"Gatsby + GitHub Discussions","number":5,"bodyHTML":"<p dir=\"auto\">这个 <a href=\"https://github.com/lencx/gg\">GG: Gatsby + GitHub</a> 实现的方法好用的确是挺好用的，唯一不足的是评论部分的内容有点差强人意，如果能增加一个 <a href=\"https://giscus.app/\" rel=\"nofollow\">giscus</a> 的支持就好了。</p>\n<p dir=\"auto\">个人尝试着折腾了一下，奈何个人对 Gatsby 实在搞不懂，无法实现，这个仓库 <a href=\"https://github.com/lencx/gg\">gg</a> 好像也不怎么维护了，终究是有点鸡肋。</p>\n<p dir=\"auto\">等我把 mkdocs 的博客一系列自定义的功能弄好，或许最终还是选择回到 mkdocs 上。</p>","updatedAt":"2023-11-22T02:05:59Z","upvoteCount":1,"author":{"login":"shenweiyan","avatarUrl":"https://avatars.githubusercontent.com/u/26101369?u=1b7a7851e63a2d011182285edfe9077e7b6b1ca5&v=4","url":"https://github.com/shenweiyan"},"category":{"isAnswerable":false,"name":"1.2 折腾","emoji":":hammer_and_wrench:"},"labels":{"edges":[]},"comments":{"edges":[]}}},"pageContext":{"number":5,"previous":null,"next":{"title":"rgd.yml","number":2}}},
+    "staticQueryHashes": ["151096407","2861350382"]}
